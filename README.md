@@ -10,6 +10,7 @@ This repository contains a list of demonstration applications. The demo applicat
 + [Dot.Net: Demo applications focused on  Microsoft .Net Platform ](https://github.com/ameksike/demo.ms.net)
 + [CLI: Shell scripts focused on Command Line Interface ](https://github.com/ameksike/demo.cli)
 + [Maps: Demo applications focused on Geographic Information Systems (GIS)](https://github.com/ameksike/demo.map)
++ [Service: Demo applications focused on create Services ](https://github.com/ameksike/demo.service)
 
 
 
