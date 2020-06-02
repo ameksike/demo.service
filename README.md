@@ -1,6 +1,5 @@
 # Demo Services
-This repository contains a list of demonstration applications. The demo applications have as a common factor the use of technologies for create Services (GraphQL, REST, SOAP, etc)
-
+This repository contains a list of demonstration applications. The demo applications have as a common factor the use of technologies for create Services (GraphQL, REST, SOAP, etc). Note that most of the published code is for academic purposes.
 
 ### Similar projects 
 + [JavaScript: Demo applications written in JavaScript ](https://github.com/ameksike/demo.javascript)
