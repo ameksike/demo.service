@@ -9,6 +9,7 @@
  * @update: 23/4/2011
  * @license: GPL v3
  */
+
 include __DIR__ . "/src/ksrest/KsRest.php";
 
 $database = __DIR__ . "/data/store.json";

@@ -85,11 +85,14 @@ class KsRest
         return $param;
     }
     protected function getHtmlInput($asArray=true){	
+        $obj = json_decode(file_get_contents('php://input'), true);   
+        if(is_array($obj)) return $obj;
         $raw  = '';
         $httpContent = fopen('php://input', 'r');
         while ($kb = fread($httpContent, 1024)) $raw .= $kb;
         fclose($httpContent);
-		parse_str($raw, $output);
+        parse_str($raw, $output);
+        //var_dump($output); die('-----------------');
         $input = !is_string($output) ? $output : json_decode(stripslashes($raw), $asArray);
         return $input;
     }

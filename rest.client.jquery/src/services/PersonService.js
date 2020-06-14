@@ -1,7 +1,8 @@
-class Person {
+class PersonService 
+{
     url;
     constructor(){
-        this.url = "http://localhost/dev/rest.server/index.php/person/";
+        this.url = "/rest.server.ksrest/index.php/person/";
     }
 
     list(done, fail){
@@ -16,7 +17,6 @@ class Person {
              if(fail instanceof Function) fail(textStatus);
         });
     }
-
 
     insert(done, fail){
 
@@ -52,27 +52,26 @@ class Person {
             type: "PUT",
             dataType: "json",
             url: this.url + "/" + $('#id').val(),
-        })
-         .done(function( data, textStatus, jqXHR ) {
-             if(done instanceof Function) done(data);
-         })
-         .fail(function( jqXHR, textStatus, errorThrown ) {
-             if(fail instanceof Function) fail(textStatus);
+            error: function(error) {
+                if(fail instanceof Function) fail(error);
+            },
+            success: function (data){
+                if(done instanceof Function) done(data);
+            }
         });
     }
     
-
     delete(done, fail){
         $.ajax({
             type: "DELETE",
             dataType: "json",
             url: this.url + "/" + $('#id').val(),
-        })
-         .done(function( data, textStatus, jqXHR ) {
-             if(done instanceof Function) done(data);
-         })
-         .fail(function( jqXHR, textStatus, errorThrown ) {
-             if(fail instanceof Function) fail(textStatus);
+            error: function(error) {
+                if(fail instanceof Function) fail(error);
+            },
+            success: function (data){
+                if(done instanceof Function) done(data);
+            }
         });
     }
 };

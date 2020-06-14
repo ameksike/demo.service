@@ -1,0 +1,1 @@
+php -S 0.0.0.0:8081 -t ./  -d error_reporting=E_ALL -d error_log=portal/log/error.log 
