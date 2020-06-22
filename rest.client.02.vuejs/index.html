@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./vendor/fontawesome-free/css/all.css"/>
+        <link rel="stylesheet" href="./vendor/plugins/sweetalert2/sweetalert2.min.css"/>
+    </head>
+
+    <body>
+
+        <div id="app">
+            <ks-list v-bind:list="list"></ks-list>
+        </div>
+       
+        <script src="./vendor/jquery/jquery.min.js"></script>
+        <script src="./vendor/popper/popper.min.js"></script>
+        <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+        
+        <script src="./vendor/vue/vue.min.js"></script>
+        <script src="./vendor/vue/vuex.min.js"></script>
+        <script src="./vendor/axios/axios.min.js"></script>
+        <script src="./vendor/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+
+        <script src="./src/models/PersonStore.js"></script>
+
+        <script src="./src/services/PersonService.js"></script>
+        <script src="./src/controllers/PersonController.js"></script>
+        <script src="./src/controllers/FrontController.js"></script>
+
+        <script src="./src/views/add.js"></script>
+        <script src="./src/views/edit.js"></script>
+        <script src="./src/views/list.js"></script>
+        <script src="./src/views/layout.js"></script>
+
+        <script >
+            $(document).ready(function() {
+                var frontController = new FrontController();
+                frontController.initPersonController();
+            });
+        </script>
+    </body>
+</html>
