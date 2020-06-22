@@ -35,6 +35,7 @@ class PersonController
         this.srvPerson.insert({
                 name:  $('#name').val(),
                 age: $('#age').val(),
+                sex: $('#sex').val()
             },
             (data)=>{
                 if(data){
@@ -53,6 +54,7 @@ class PersonController
         this.srvPerson.update({
                 name: $('#name').val(),
                 age: $('#age').val(),
+                sex: $('#sex').val(),
                 id: $('#id').val()
             },
             (data)=>{
@@ -88,6 +90,7 @@ class PersonController
             +"<b>  id:</b> " + data['id'] 
             +"<b>, name: </b>" + data['name'] 
             +"<b>, age: </b>"+ data['age'] 
+            +"<b>, sex: </b>"+ data['sex'] 
             + "</li>";
     }
 

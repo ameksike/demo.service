@@ -22,6 +22,7 @@ class PersonController extends KsRestController
 		$person = isset($param['data']) ? $param['data'] : [
 			"name"=>$param['name'],
 			"age"=>$param['age'],
+			"sex"=>$param['sex'],
 		];
 		return $this->datamanager->insert($person); 
 	}	

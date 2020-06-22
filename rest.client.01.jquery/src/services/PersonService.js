@@ -29,7 +29,8 @@ class PersonService
         $.ajax({
             data: {
                 "name" : data.name, 
-                "age" : data.age
+                "age" : data.age, 
+                "sex" : data.sex
             },
             type: "POST",
             url: this.url,
@@ -47,7 +48,8 @@ class PersonService
         $.ajax({
             data: {
                 "name" : data.name, 
-                "age" : data.age
+                "age" : data.age, 
+                "sex" : data.sex
             },
             type: "PUT",
             dataType: "json",
