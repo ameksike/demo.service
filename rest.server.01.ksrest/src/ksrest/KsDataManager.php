@@ -22,46 +22,46 @@ class KsDataManager
 		return $id!='' ? ( isset($data[$id]) ? $data[$id] : null ) : $data;
 	}
 		
-	public function insert($person){
+	public function insert($entity){
 		try{
 			$data = $this->select();
 			$id = count($data);
-			$person['id'] = $id;
-			$data[$id] = $person;
+			$entity['id'] = $id;
+			$data[$id] = $entity;
 			file_put_contents($this->src, json_encode($data));
 		}
         catch (\Exception $e) {
             return false;
         }
-		return $person;
+		return $entity;
 	}		
 	
-	public function update($person, $id){
+	public function update($entity, $id){
 		try{
 			$data = $this->select();
 			if(!isset($data[$id])) return false;
-			$person['id'] = $id;
-			$data[$id] = $person;
+			$entity['id'] = $id;
+			$data[$id] = $entity;
 			file_put_contents($this->src, json_encode($data));
 		}
         catch (\Exception $e) {
             return false;
         }
-		return $person;
+		return $entity;
 	}
 	
 	public function delete($id){
-		$person = false;
+		$entity = false;
 		try{
 			$data = $this->select();
 			if(!isset($data[$id])) return false;
-			$person = $data[$id];
+			$entity = $data[$id];
 			unset($data[$id]);
 			file_put_contents($this->src, json_encode($data));
 		}
         catch (\Exception $e) {
             return false;
         }
-		return $person;
+		return $entity;
 	}
 }
