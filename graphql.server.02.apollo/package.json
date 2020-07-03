@@ -1,0 +1,16 @@
+{
+  "name": "graphql.server.02.apollo",
+  "version": "1.0.0",
+  "description": "GraphQl Services Server based on Apollo ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Membrides Espinosa",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.15.1",
+    "express": "^4.17.1"
+  }
+}
