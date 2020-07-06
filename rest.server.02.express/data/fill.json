@@ -1,0 +1,32 @@
+[
+    {
+        "devices":[
+            {"_id":"5e11507f093d7615c015f505", "uid":59,"vendor":"Device 1", "status":true, "created":"2020-01-05"},
+            {"_id":"5e1151201ee0df26787dcbb1", "uid":60,"vendor":"Device 2", "status":true, "created":"2020-01-05"},
+            {"_id":"5e1151261ee0df26787dcbb2", "uid":61,"vendor":"Device 3", "status":true, "created":"2020-01-05"},
+            {"_id":"5e1151281ee0df26787dcbb3", "uid":62,"vendor":"Device 4", "status":true, "created":"2020-01-05"},
+            {"_id":"5e11512b1ee0df26787dcbb4", "uid":63,"vendor":"Device 5", "status":true, "created":"2020-01-05"},
+            {"_id":"5e11512f1ee0df26787dcbb5", "uid":64,"vendor":"Device 6", "status":true, "created":"2020-01-05"},
+            {"_id":"5e11514d1ee0df26787dcbb7", "uid":65,"vendor":"Device 7", "status":true, "created":"2020-01-05"}
+        ],
+        "_id":"5e1121e8c3d5b526f45214a5",
+        "sn":"98A",
+        "name":"Gateway 1",
+        "ipv4":"192.168.1.1"
+    },{
+        "devices":[
+            {"_id":"5e1190b92f7de1201077d61b", "uid":59, "vendor":"Device 1", "status":false, "created":"2020-01-05"},
+            {"_id":"5e1190e643044b2e889bacb4", "uid":60, "vendor":"Device 2", "status":false, "created":"2020-01-05"}
+        ],
+        "_id":"5e11226fc3d5b526f45214a7",
+        "sn":"99B",
+        "name":"Gateway 2",
+        "ipv4":"192.168.1.2"
+    },{
+        "devices":[],
+        "_id":"5e1122a6c3d5b526f45214a8",
+        "sn":"99C",
+        "name":"Gateway 3",
+        "ipv4":"192.168.0.3"
+    }
+]

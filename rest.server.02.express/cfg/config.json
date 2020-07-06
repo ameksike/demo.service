@@ -1,0 +1,46 @@
+{
+    "env":{
+        "test":{
+            "srv": {
+                "port": 3003,
+                "host": "localhost",
+                "protocol": "http",
+                "module": {
+                    "load" : [
+                        "gateway",
+                        "peripheral"
+                    ]
+                }
+            },
+            "app": {
+                "db":{
+                    "name": "musala-test",
+                    "host": "localhost",
+                    "port": "27017",
+                    "driver": "mongodb"
+                }
+            }
+        },
+        "dev":{
+            "srv": {
+                "port": 3000,
+                "host": "localhost",
+                "protocol": "http",
+                "module": {
+                    "load" : [
+                        "gateway",
+                        "peripheral"
+                    ]
+                }
+            },
+            "app": {
+                "db":{
+                    "name": "musala",
+                    "host": "localhost",
+                    "port": "27017",
+                    "driver": "mongodb"
+                }
+            }
+        }
+    }
+}
