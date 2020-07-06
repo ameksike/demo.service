@@ -5,6 +5,9 @@ It is a demo written on JavaScript over NodeJS for REST API Server. Is very simp
 - npm init
 - npm install express --save
 - npm install body-parser --save
+- npm install cors 
+- npm install mongoose
+- npm install nodemon jest supertest -D
 
 ## Use steps 
 - git clone https://github.com/ameksike/demo.service.git
