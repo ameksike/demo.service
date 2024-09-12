@@ -1,0 +1,53 @@
+// person.proto
+syntax = "proto3";
+
+package personservice;
+
+// The Person resource
+message Person {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+  string sex = 4;
+  string address = 5;
+}
+
+// Request and response for creating a person
+message CreatePersonRequest {
+  Person person = 1;
+}
+message CreatePersonResponse {
+  Person person = 1;
+}
+
+// Request and response for reading a person
+message GetPersonRequest {
+  string id = 1;
+}
+message GetPersonResponse {
+  Person person = 1;
+}
+
+// Request and response for updating a person
+message UpdatePersonRequest {
+  Person person = 1;
+}
+message UpdatePersonResponse {
+  Person person = 1;
+}
+
+// Request for deleting a person
+message DeletePersonRequest {
+  string id = 1;
+}
+message DeletePersonResponse {
+  string message = 1;
+}
+
+// The PersonService with CRUD operations
+service PersonService {
+  rpc CreatePerson (CreatePersonRequest) returns (CreatePersonResponse);
+  rpc GetPerson (GetPersonRequest) returns (GetPersonResponse);
+  rpc UpdatePerson (UpdatePersonRequest) returns (UpdatePersonResponse);
+  rpc DeletePerson (DeletePersonRequest) returns (DeletePersonResponse);
+}

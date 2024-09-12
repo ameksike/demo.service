@@ -1,0 +1,18 @@
+{
+  "name": "server.nodejs",
+  "version": "1.0.0",
+  "description": "- npm init -y\r - npm install @grpc/grpc-js @grpc/proto-loader",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "uuid": "^8.3.2"
+  }
+}

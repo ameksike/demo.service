@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'com.google.protobuf' version '0.8.18'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.grpc:grpc-netty-shaded:1.47.0'
+    implementation 'io.grpc:grpc-protobuf:1.47.0'
+    implementation 'io.grpc:grpc-stub:1.47.0'
+    implementation 'com.google.protobuf:protobuf-java:3.21.12'
+
+    // Only required during development for generating code from .proto files
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.21.12"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.47.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                grpc {}
+            }
+        }
+    }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
