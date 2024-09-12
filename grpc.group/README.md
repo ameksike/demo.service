@@ -9,7 +9,7 @@ The project will be organized as follows:
 
 ```
 grpc-crud-microservices/
-├── person-service/          # Node.js gRPC server
+├── server.nodejs/          # Node.js gRPC server
 │   ├── src/
 │   │   ├── server.js
 │   │   ├── database.js
@@ -17,22 +17,22 @@ grpc-crud-microservices/
 │   │   └── person.proto
 │   ├── package.json
 │   └── Dockerfile
-├── node-client/             # Node.js gRPC client
+├── client.nodejs/             # Node.js gRPC client
 │   ├── client.js
 │   ├── protos/
 │   │   └── person.proto
 │   ├── package.json
-├── python-client/           # Python gRPC client
+├── client.python/           # Python gRPC client
 │   ├── client.py
 │   ├── protos/
 │   │   └── person.proto
 │   └── requirements.txt
-├── dotnet-client/           # .NET gRPC client
+├── client.dotnet/           # .NET gRPC client
 │   ├── Program.cs
 │   ├── Protos/
 │   │   └── person.proto
 │   └── grpc-client.csproj
-├── java-client/             # Java gRPC client
+├── client.java/             # Java gRPC client
 │   ├── src/
 │   │   └── main/
 │   │       └── java/

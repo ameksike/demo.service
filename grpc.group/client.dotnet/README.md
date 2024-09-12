@@ -1,5 +1,5 @@
 ### Install Dependencies
-- cd dotnet-client
+- cd client.dotnet
 - dotnet restore
 
 ### Run the gRPC Client
