@@ -1,8 +1,9 @@
 const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const path = require('path');
+const config = require('../../server.nodejs/cfg/config.json');
 
-const protoConfig = path.join(__dirname, '../../server.nodejs/src/models/person.proto');
+const protoConfig = path.join(__dirname, '../../server.nodejs', config.service.person.path);
 const packageDefinition = protoLoader.loadSync(protoConfig, {
     keepCase: true,
     longs: String,
@@ -10,10 +11,14 @@ const packageDefinition = protoLoader.loadSync(protoConfig, {
     defaults: true,
     oneofs: true
 });
-const personProto = grpc.loadPackageDefinition(packageDefinition).personservice;
+const proto = grpc.loadPackageDefinition(packageDefinition);
 
 (function main() {
-    const client = new personProto.PersonService('localhost:50051', grpc.credentials.createInsecure());
+    const PersonService = proto[config.service.person.package][config.service.person.interface];
+    const client = new PersonService(
+        `${config.host}:${config.port}`,
+        grpc.credentials.createInsecure()
+    );
 
     const newEntity = { name: 'John Doe', age: 30, sex: 'M', address: '123 Main St' };
     // Create a person

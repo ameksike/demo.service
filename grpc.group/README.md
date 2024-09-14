@@ -58,3 +58,4 @@ The Node.js gRPC server will implement CRUD logic and expose the service defined
 - [A high performance, open source universal RPC framework](https://grpc.io/)
 - [Basics tutorial](https://grpc.io/docs/languages/node/basics/)
 - [What is gPRC?](https://www.youtube.com/watch?v=gnchfOojMk4)
+- [gRPC for developers](https://www.youtube.com/watch?v=7g7-_1Fztmc)
