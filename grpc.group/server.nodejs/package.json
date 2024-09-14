@@ -1,7 +1,7 @@
 {
   "name": "server.nodejs",
   "version": "1.0.0",
-  "description": "- npm init -y\r - npm install @grpc/grpc-js @grpc/proto-loader",
+  "description": "gRPC Server Demo",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
