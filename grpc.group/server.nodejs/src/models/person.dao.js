@@ -16,7 +16,7 @@ function update(person) {
   return null;
 }
 
-function deletePerson(id) {
+function remove(id) {
   if (persons[id]) {
     delete persons[id];
     return true;
@@ -28,5 +28,5 @@ module.exports = {
   create,
   read,
   update,
-  delete: deletePerson,
+  delete: remove,
 };

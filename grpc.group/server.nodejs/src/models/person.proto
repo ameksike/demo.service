@@ -1,6 +1,4 @@
-// person.proto
 syntax = "proto3";
-
 package personservice;
 
 // The Person resource
@@ -46,8 +44,8 @@ message DeletePersonResponse {
 
 // The PersonService with CRUD operations
 service PersonService {
-  rpc CreatePerson (CreatePersonRequest) returns (CreatePersonResponse);
-  rpc GetPerson (GetPersonRequest) returns (GetPersonResponse);
-  rpc UpdatePerson (UpdatePersonRequest) returns (UpdatePersonResponse);
-  rpc DeletePerson (DeletePersonRequest) returns (DeletePersonResponse);
+  rpc create (CreatePersonRequest) returns (CreatePersonResponse);
+  rpc select (GetPersonRequest) returns (GetPersonResponse);
+  rpc update (UpdatePersonRequest) returns (UpdatePersonResponse);
+  rpc remove (DeletePersonRequest) returns (DeletePersonResponse);
 }
