@@ -12,13 +12,18 @@ grpc-crud-microservices/
 ├── server.nodejs/          # Node.js gRPC server
 │   ├── src/
 │   │   ├── server.js
-│   │   ├── database.js
-│   ├── protos/
-│   │   └── person.proto
+│   │   ├── models/
+│   │   │   ├── person.dao.js
+│   │   │   └── person.proto
+│   │   ├── services/
+│   │   │   └── person.js
+│   ├── cfg/
+│   │   └── config.json
 │   ├── package.json
 │   └── Dockerfile
-├── client.nodejs/             # Node.js gRPC client
-│   ├── client.js
+├── client.nodejs/           # Node.js gRPC client
+│   ├── src/
+│   │   └── client.js
 │   ├── protos/
 │   │   └── person.proto
 │   ├── package.json
@@ -45,7 +50,7 @@ grpc-crud-microservices/
 
 ### Step 1: Define the .proto File for Person Service
 We start by defining the person.proto file in the protos/ folder. This file will contain definitions for CRUD operations on a Person resource. A person has name, age, sex, and address.
-- [person.proto](server.nodejs/protos/person.proto)
+- [person.proto](server.nodejs/src/models/person.proto)
 
 ### Step 2: Implement the gRPC Server in Node.js (person-service)
 The Node.js gRPC server will implement CRUD logic and expose the service defined in the person.proto file.
