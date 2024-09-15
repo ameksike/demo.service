@@ -3,6 +3,9 @@ node_modules/
 # Python
 venv/
 __pycache__/
-# C#
+# MS Dot Net
 obj/
 bin/
+# Java
+.gradle/
+build/

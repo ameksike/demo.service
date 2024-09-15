@@ -6,6 +6,29 @@
 ### Run the gRPC Client
 - dotnet run
 
+### Imports 
+- The configuration is loaded directly from the `grpc-client.csproj` file 
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.47.0" PrivateAssets="All" />
+        <PackageReference Include="Google.Protobuf" Version="3.21.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="../server.nodejs/src/models/person.proto" GrpcServices="Client" />
+    </ItemGroup>
+
+</Project>
+```
+
 ### Dependencies  
 - Grpc.Net.Client: Provides gRPC client functionality.
 - Grpc.Tools: Used to compile the .proto files.
