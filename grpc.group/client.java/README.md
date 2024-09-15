@@ -15,6 +15,8 @@
 ### References
 - [gRPC & Java](https://grpc.io/docs/languages/java/)
 - [Gradle Installation](https://gradle.org/install/)
+- [Basics tutorial](https://grpc.io/docs/languages/java/basics/)
+- [RouteGuideClient](https://github.com/grpc/grpc-java/blob/master/examples/src/main/java/io/grpc/examples/routeguide/RouteGuideClient.java)
 
 
 ### Notes
