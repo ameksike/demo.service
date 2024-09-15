@@ -16,3 +16,13 @@
 - [Downloading .NET 8.0 SDK (v8.0.401)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer)
 - [gRPC & C# / .NET](https://grpc.io/docs/languages/csharp/)
 - [Introducción a gRPC en .NET](https://learn.microsoft.com/es-es/aspnet/core/grpc/?view=aspnetcore-8.0)
+
+### Notes
+- Use Correct Method Names in the Client Code: Instead of using Create, you need to use the camelCase version of the method names as generated from the .proto file. For example:
+
+```
+create → createAsync (asynchronous method)
+select → selectAsync
+update → updateAsync
+remove → removeAsync
+```
