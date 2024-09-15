@@ -13,7 +13,13 @@ public class GrpcClient {
         PersonServiceGrpc.PersonServiceBlockingStub stub = PersonServiceGrpc.newBlockingStub(channel);
 
         // Create a person
-        Person person = Person.newBuilder().setName("John Doe").setAge(30).setSex("M").setAddress("123 Main St").build();
+        Person person = Person.newBuilder()
+            .setName("John Doe")
+            .setAge(30)
+            .setSex("M")
+            .setAddress("123 Main St")
+            .build();
+
         CreatePersonResponse createResponse = stub.create(CreatePersonRequest.newBuilder().setPerson(person).build());
         System.out.println("Created: " + createResponse.getPerson());
 
