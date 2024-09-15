@@ -1,6 +1,6 @@
 import grpc
-import person_pb2
-import person_pb2_grpc
+import person_pb2 as srvPersonNs
+import person_pb2_grpc as srvPersonPk
 
 import json
 import os
@@ -17,33 +17,34 @@ def loadConfig():
 
 def main():
     config = loadConfig()
-    protoPath = config["service"]["person"]["path"]
-    packageName = config["service"]["person"]["package"]
-    PersonService = config["service"]["person"]["interface"]
-    uri = config["host"] + ":" + str(config["port"])
-
-    print(config["host"] + ":" + str(config["port"]))
+    uri = (
+        ("localhost" if config["host"] == "0.0.0.0" else config["host"])
+        + ":"
+        + str(config["port"])
+    )
 
     with grpc.insecure_channel(uri) as channel:
-        stub = person_pb2_grpc.PersonServiceStub(channel)
-        
+        stub = srvPersonPk.PersonServiceStub(channel)
+
         # Create a person
-        person = person_pb2.Person(name='John Doe', age=30, sex='M', address='123 Main St')
-        response = stub.create(person_pb2.CreatePersonRequest(person=person))
-        print("Created:", response.person)
-        
+        person = srvPersonNs.Person(
+            name="John Doe", age=30, sex="M", address="123 Main St"
+        )
+        response = stub.create(srvPersonNs.CreatePersonRequest(person=person))
+
         # Get the person by ID
-        response = stub.select(person_pb2.GetPersonRequest(id=response.person.id))
+        response = stub.select(srvPersonNs.GetPersonRequest(id=response.person.id))
         print("Retrieved:", response.person)
-        
+
         # Update the person
-        response.person.address = '456 Elm St'
-        response = stub.update(person_pb2.UpdatePersonRequest(person=response.person))
+        response.person.address = "456 Elm St"
+        response = stub.update(srvPersonNs.UpdatePersonRequest(person=response.person))
         print("Updated:", response.person)
-        
+
         # Delete the person
-        response = stub.remove(person_pb2.DeletePersonRequest(id=response.person.id))
+        response = stub.remove(srvPersonNs.DeletePersonRequest(id=response.person.id))
         print(response.message)
+
 
 if __name__ == "__main__":
     main()
