@@ -57,6 +57,7 @@ The Node.js gRPC server will implement CRUD logic and expose the service defined
 
 ### Run the Project with Docker Compose
 - docker-compose up --build
+- netstat -an | findstr 50051
 
 
 ### References 
