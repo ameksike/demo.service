@@ -1,8 +1,7 @@
-package src.main.java;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import personservice.PersonServiceGrpc;
 import personservice.PersonOuterClass.*;
+import personservice.PersonServiceGrpc;
 
 public class GrpcClient {
     public static void main(String[] args) throws Exception {

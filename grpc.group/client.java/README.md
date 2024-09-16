@@ -1,5 +1,7 @@
 ### Install Dependencies
 - cd client.java
+- gradle clean
+- gradle generateProto
 - gradle build
 
 ### Run the gRPC Client
