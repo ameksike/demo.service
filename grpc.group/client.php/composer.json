@@ -1,6 +1,6 @@
 {
     "require": {
-        "grpc/grpc": "^1.38",
+        "grpc/grpc": "^1.57",
         "google/protobuf": "^4.28"
     }
 }

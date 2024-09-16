@@ -1,7 +1,7 @@
 <?php
-require 'vendor/autoload.php';
-require 'generated/PersonServiceGrpcClient.php';
-require 'generated/Person.php';
+require '../vendor/autoload.php';
+require '../generated/PersonServiceGrpcClient.php';
+require '../generated/Person.php';
 
 use Grpc\ChannelCredentials;
 use PersonService\PersonServiceClient;
