@@ -20,6 +20,7 @@ This repository contains a list of demonstration applications. The demo applicat
     - [Client & Python](./grpc.group/client.python/README.md)
     - [Client & Java](./grpc.group/client.java/README.md)
     - [Client & MS Dot Net (C#)](./grpc.group/client.dotnet/README.md)
+    - [Client & PHP](./grpc.group/client.php/README.md)
 
 ### Similar projects 
 + [JavaScript: Demo applications written in JavaScript ](https://github.com/ameksike/demo.javascript)

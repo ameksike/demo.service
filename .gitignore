@@ -9,3 +9,5 @@ bin/
 # Java
 .gradle/
 build/
+# php
+vendor/
