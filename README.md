@@ -12,8 +12,12 @@ This repository contains a list of demonstration applications. The demo applicat
     - [Client & Angular & Boostrap](./rest.client.03.angularboostrap/)
     - [Client & Angular & Material](./rest.client.04.angularmaterial/)
 - Graphql
-    - [Graphql Server & Express](./graphql.server.01.express/README.md)
-    - [Graphql Server & Apollo](./graphql.server.02.apollo/README.md)
+    - Graphql Server & Express
+        - [CommonJs](./graphql.server.01.express/README.md)
+    - Graphql Server & Apollo
+        - [CommonJs](./graphql.server.02.apollo.cjs/README.md)
+        - [ECMAScript](./graphql.server.02.apollo.ems/README.md)
+        - [TypeScript](./graphql.server.02.apollo.ts/README.md)
 - gRPC
     - [Server & Node.js](./grpc.group/server.nodejs/README.md)
     - [Client & Node.js](./grpc.group/client.nodejs/README.md)
