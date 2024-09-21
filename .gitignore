@@ -11,3 +11,5 @@ bin/
 build/
 # php
 vendor/
+# TypeScript
+dist/
