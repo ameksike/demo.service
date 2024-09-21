@@ -7,7 +7,7 @@
 
 ### Run
 - `npm start`
-- REQUEST:
+- REQUEST: `POST http://localhost:4044/`
     ```
     query GetBooks {
         books {
