@@ -1,7 +1,5 @@
 import { transactions } from "../models/transaction.dataset.js";
 import { users } from "../models/user.dataset.js";
-/*import User from "../models/user.model.js";
-import bcrypt from "bcryptjs";*/
 
 const UserResolver = {
     Mutation: {
@@ -69,7 +67,7 @@ const UserResolver = {
            },*/
     },
     Query: {
-        user: async (_, { userId }) => {
+        user: async (parent, { userId }) => {
             try {
                 let tmp = users.find(itm => itm._id == userId);
                 return tmp || null;

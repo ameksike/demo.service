@@ -12,13 +12,19 @@
 ### Example 1
 - REQUEST: `POST http://localhost:4044/`
     ```
-    query GetUsers($userId: ID!) {
+    query GetData($userId: ID!) {
         user(userId: $userId) {
-            name,
+            name
+            gender
             username
         },
         users {
             username
+            name
+        },
+        books {
+            author
+            title
         }
     }
     ```
@@ -28,23 +34,39 @@
         "data": {
             "user": {
                 "name": "User Two",
+                "gender": "female",
                 "username": "user2"
             },
             "users": [
                 {
-                    "username": "user1"
+                    "username": "user1",
+                    "name": "User One"
                 },
                 {
-                    "username": "user2"
+                    "username": "user2",
+                    "name": "User Two"
                 },
                 {
-                    "username": "user3"
+                    "username": "user3",
+                    "name": "User Three"
                 },
                 {
-                    "username": "user4"
+                    "username": "user4",
+                    "name": "User Four"
                 },
                 {
-                    "username": "user5"
+                    "username": "user5",
+                    "name": "User Five"
+                }
+            ],
+            "books": [
+                {
+                    "author": "Kate Chopin",
+                    "title": "The Awakening"
+                },
+                {
+                    "author": "Paul Auster",
+                    "title": "City of Glass"
                 }
             ]
         }
