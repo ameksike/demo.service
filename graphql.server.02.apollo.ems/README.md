@@ -16,6 +16,9 @@
         user(userId: $userId) {
             name,
             username
+        },
+        users {
+            username
         }
     }
     ```
@@ -26,7 +29,24 @@
             "user": {
                 "name": "User Two",
                 "username": "user2"
-            }
+            },
+            "users": [
+                {
+                    "username": "user1"
+                },
+                {
+                    "username": "user2"
+                },
+                {
+                    "username": "user3"
+                },
+                {
+                    "username": "user4"
+                },
+                {
+                    "username": "user5"
+                }
+            ]
         }
     }
     ```
