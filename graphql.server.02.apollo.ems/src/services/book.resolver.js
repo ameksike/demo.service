@@ -78,11 +78,12 @@ export const resolvers = {
          * @returns {Object} deleted book
          */
         deleteBook: (parent, args) => {
-            let tmp = books.find(book => book.id === args.id);
-            if (!tmp) {
+            let index = books.findIndex(book => book.id === args.id);
+            if (tmp === -1) {
                 return null;
             }
-            books = books.filter(book => book.id !== args.id);
+            let tmp = books[index];
+            books.splice(index, 1);
             return tmp;
         }
     }
