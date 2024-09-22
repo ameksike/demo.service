@@ -168,7 +168,7 @@
     ```
 
 ### Example: Multiple book operations
-- REQUEST 
+- REQUEST `POST http://localhost:4044/`
     ```
     mutation PerformMutations {
         # 1. Insert first new book
