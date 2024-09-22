@@ -229,7 +229,34 @@
 
 - RESPONSE
     ```
-
+    {
+        "data": {
+            "book1": {
+                "id": 3,
+                "title": "The Hobbit",
+                "author": "J.R.R. Tolkien",
+                "publishedYear": 1937
+            },
+            "book2": {
+                "id": 4,
+                "title": "The Catcher in the Rye",
+                "author": "J.D. Salinger",
+                "publishedYear": 1951
+            },
+            "updateBook": {
+                "id": 1,
+                "title": "1984 (Updated Again)",
+                "author": "George Orwell",
+                "publishedYear": 1949
+            },
+            "deleteBook": {
+                "id": 2,
+                "title": "City of Glass",
+                "author": "Paul Auster",
+                "publishedYear": 2020
+            }
+        }
+    }
     ```
 
 ### Example Multi Request

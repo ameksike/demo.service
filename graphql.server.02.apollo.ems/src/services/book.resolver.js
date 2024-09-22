@@ -79,7 +79,7 @@ export const resolvers = {
          */
         deleteBook: (parent, args) => {
             let index = books.findIndex(book => book.id === args.id);
-            if (tmp === -1) {
+            if (index === -1) {
                 return null;
             }
             let tmp = books[index];
