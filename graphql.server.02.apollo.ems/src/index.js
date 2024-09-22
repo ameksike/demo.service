@@ -3,8 +3,8 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 
 // schema 
-import userTypeDef from './models/user.schema.js';
-import transactionTypeDef from './models/transaction.schema.js';
+import UserSchema from './models/user.schema.js';
+import TransactionSchema from './models/transaction.schema.js';
 import { typeDefs as bookSchema } from './models/book.schema.js';
 
 // resolver
@@ -18,8 +18,8 @@ import { resolvers as BookResolver } from './services/book.resolver.js';
 const server = new ApolloServer({
   typeDefs: mergeTypeDefs([
     bookSchema,
-    userTypeDef,
-    transactionTypeDef
+    UserSchema,
+    TransactionSchema
   ]),
   resolvers: mergeResolvers([
     UserResolver,

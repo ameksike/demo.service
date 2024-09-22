@@ -9,7 +9,21 @@
 - `npm start`
 - `http://localhost:4044`
 
-### Example 1
+### Get all books:
+- REQUEST 
+    ```
+    query {
+        getBooks {
+            id
+            title
+            author
+            publishedYear
+        }
+    }
+    ```
+
+
+### Example Multi Request
 - REQUEST: `POST http://localhost:4044/`
     ```
     query GetData($userId: ID!) {
