@@ -3,14 +3,19 @@
 - `npm init --yes && npm pkg set type="module"`
 - `npm install @apollo/server graphql`
 
-### Run
+![screenshot](./rsc/screenshot.jpg)
+
+### Run 
 - `npm start`
+- `http://localhost:4044`
+
+### Example 1
 - REQUEST: `POST http://localhost:4044/`
     ```
-    query GetBooks {
-        books {
-            title
-            author
+    query GetUsers($userId: ID!) {
+        user(userId: $userId) {
+            name,
+            username
         }
     }
     ```
@@ -18,16 +23,10 @@
     ```
     {
         "data": {
-            "books": [
-                {
-                    "title": "The Awakening",
-                    "author": "Kate Chopin"
-                },
-                {
-                    "title": "City of Glass",
-                    "author": "Paul Auster"
-                }
-            ]
+            "user": {
+                "name": "User Two",
+                "username": "user2"
+            }
         }
     }
     ```
