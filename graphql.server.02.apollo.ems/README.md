@@ -327,3 +327,4 @@
 ### References 
 - [Get started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started)
 - [GraphQL Crash Course in 2024 | Build a Full Stack MERN App](https://www.youtube.com/watch?v=Vr-QHtbmd38)
+- [GraphQL Best Practices](https://graphql.org/learn/best-practices/)
