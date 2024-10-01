@@ -1,6 +1,6 @@
 export const schema = `#graphql
     type Query {
-        hello(name: String): String
+        getHello(name: String): String
 
         age: Int
         weight: Float!
@@ -12,6 +12,7 @@ export const schema = `#graphql
 
     type User {
         id: Int
-        name: String
+        name: String,
+        family: [User]
     }
 `;

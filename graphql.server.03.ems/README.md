@@ -5,10 +5,19 @@
 {
     "query": `
         query MyQuery($name: String) { 
-            hello(name: $name) 
-            weight 
             age 
+            weight 
             hobbies
+
+            getHello(name: $name) 
+
+            user {
+                id 
+                name 
+                family {
+                    name
+                }
+            }
         }
     `,
     "variables": { 
