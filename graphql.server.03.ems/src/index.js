@@ -2,6 +2,7 @@ import express from "express"
 import { createHandler } from "graphql-http/lib/use/express"
 import { buildSchema } from "graphql"
 import { ruruHTML } from "ruru/server"
+import { schema as defaultSchemaService } from "./model/default.schema_service.js"
 import { schema as defaultSchema } from "./model/default.schema.js"
 import { resolver as defaultResolver } from "./service/default.resolver.js"
 
@@ -15,6 +16,14 @@ app.all(
         schema: buildSchema(defaultSchema),
         // The root provides a resolver function for each API endpoint
         rootValue: defaultResolver,
+    })
+)
+
+// Create and use the GraphQL handler for All in One.
+app.all(
+    "/allInone",
+    createHandler({
+        schema: defaultSchemaService
     })
 )
 
