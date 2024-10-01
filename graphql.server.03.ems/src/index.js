@@ -2,39 +2,19 @@ import express from "express"
 import { createHandler } from "graphql-http/lib/use/express"
 import { buildSchema } from "graphql"
 import { ruruHTML } from "ruru/server"
+import { schema as defaultSchema } from "./model/default.schema.js"
+import { resolver as defaultResolver } from "./service/default.resolver.js"
 
-
-// Construct a schema, using GraphQL schema language
-const schema = buildSchema(`
-  type Query {
-    hello(name: String): String
-
-    age: Int
-    weight: Float!
-    isOver: Boolean
-    hobbies: [String!]!
-  }
-`)
-
-// The root provides a resolver function for each API endpoint
-const root = {
-    hello({ name }) {
-        return "Hello " + name
-    },
-    age: 17,
-    weight: 34.5,
-    isOver: true,
-    hobbies: ["one", "two"]
-}
-
-const app = express()
+const app = express();
 
 // Create and use the GraphQL handler.
 app.all(
     "/graphql",
     createHandler({
-        schema: schema,
-        rootValue: root,
+        // Construct a schema, using GraphQL schema language
+        schema: buildSchema(defaultSchema),
+        // The root provides a resolver function for each API endpoint
+        rootValue: defaultResolver,
     })
 )
 

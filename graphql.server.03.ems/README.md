@@ -1,7 +1,5 @@
 ### Client
 
-
-
 `POST http://localhost:4004/graphql`
 ```js
 {
@@ -18,6 +16,8 @@
     }
 }
 ```
+
+![doc.ruru](./rsc/doc.ruru.jpg)
 
 
 ### References
